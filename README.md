@@ -39,6 +39,7 @@ The Chat Application is a React-based web application designed for real-time con
 ## Project Structure
 
 ├── public
+
 ├── src
 
 │ ├── assets
