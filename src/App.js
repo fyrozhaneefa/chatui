@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import ConversationContainer from "./components/conversation/ConversationContainer";
+import ChatContainer from "./components/chat/ChatContainer";
+import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 function App() {
+  const selectedUser = useSelector((state) => state.selectedUser);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainComponent>
+      <ConversationContainer />
+      {selectedUser ? (
+        <ChatContainer />
+      ) : (
+        <EmptyChat>Select a Conversation</EmptyChat>
+      )}
+    </MainComponent>
   );
 }
-
+const MainComponent = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+`;
+const EmptyChat = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 22px;
+`;
 export default App;
