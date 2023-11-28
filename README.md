@@ -38,19 +38,18 @@ The Chat Application is a React-based web application designed for real-time con
 
 ## Project Structure
 
-/chatui
-|-- public
-|-- src
-|-- assets
-|-- components
-|-- dummyData
-|-- slices
-|-- store
-|-- styles
-|-- App.js
-|-- index.js
-|-- package.json
-|-- README.md
+├── public
+├── src
+│ ├── assets
+│ ├── components
+│ ├── dummyData
+│ ├── slices
+│ ├── store
+│ ├── styles
+│ ├── App.js
+│ ├── index.js
+├── package.json
+└── README.md
 
 ## Usage
 
